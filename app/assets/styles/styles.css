@@ -1,4 +1,7 @@
-$primaryFontColour: #32383d;
+$primaryFontColour: #2b2b2b;
+$bronze: #9E2F00;
+$deepPurple: #401935;
+
 
 * {
 	margin: 0;
@@ -6,6 +9,10 @@ $primaryFontColour: #32383d;
 	box-sizing: border-box;
 }
 
+::selection {
+	background: #2b2b2b;
+	color: #fff;
+}
 
 body {
 	display: flex;
@@ -23,20 +30,19 @@ color: inherit;
 }
 
 a {
-	border-bottom: solid 2px #9E2F00;
-	transition: color 0.15s;
+	border-bottom: solid 2px $deepPurple;
+	transition: all 0.1s;
 	line-height: 0.5;
-	background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient(#ff3530,#ff3530);
 }
 
 a:hover {
 	border: 0;
-	color: #9E2F00;
+	color: $deepPurple;
 }
 
 .container {
 	width: 1640px;
-	padding: 20px;
+	padding: 0 20px;
 }
 
 .header {
@@ -45,16 +51,16 @@ a:hover {
 	padding: 1em 0em;
 	width: 100%;
 	border-bottom: solid 1px #cacaca;
-	margin-bottom: 40px;
+	margin-bottom: 36px;
 }
 
 .site-title {
-	font-size: 1.5rem;
-	letter-spacing: -1px;
+	font-size: 1.75rem;
+	letter-spacing: -2px;
 	font-weight: 700;
 	vertical-align: text-bottom;
 	line-height: 1.5;
-	padding: 0.5em 0;
+	padding: 0.1em 0;
 }
 
 .menu > ul {
@@ -63,8 +69,8 @@ a:hover {
 }
 
 .menu__item {
-	padding: 1em;
-	font-size: 1.125rem;
+	padding: 1em 0 1em 1.5em;
+	font-size: 1rem;
 	font-weight: normal;
 	color: $primaryFontColour;
 	font-family: 'Lato';
@@ -114,6 +120,7 @@ a:hover {
   display: inline-block;
   min-width: 1600px;
   height: 1000px;
+  margin-top: -150px;
   background-size: cover;
 }
 

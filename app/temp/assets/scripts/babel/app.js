@@ -8,7 +8,7 @@ var slide = function slide() {
   var slider = document.getElementById("js-slider");
   var imageWrapper = document.getElementById("js-image-wrapper");
   var btnWrapper = document.getElementById("js-btn-wrapper");
-  var index = 2;
+  var index = 0;
   var imageOffset;
 
   (function () {

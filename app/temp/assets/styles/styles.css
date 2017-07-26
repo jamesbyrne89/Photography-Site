@@ -3,7 +3,14 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+::-moz-selection {
+	background: #2b2b2b;
+	color: #fff;
+}
+::selection {
+	background: #2b2b2b;
+	color: #fff;
+}
 body {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -15,31 +22,25 @@ body {
 	max-height: 100vh;
 	overflow: hidden;
 	font-family: 'asul', georgia;
-	color: #32383d;
+	color: #2b2b2b;
 }
-
 a, a:visited {
 text-decoration: none;
 color: inherit;
 }
-
 a {
-	border-bottom: solid 2px #9E2F00;
-	transition: color 0.15s;
+	border-bottom: solid 2px #401935;
+	transition: all 0.1s;
 	line-height: 0.5;
-	background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient(#ff3530,#ff3530);
 }
-
 a:hover {
 	border: 0;
-	color: #9E2F00;
+	color: #401935;
 }
-
 .container {
 	width: 1640px;
-	padding: 20px;
+	padding: 0 20px;
 }
-
 .header {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -50,35 +51,30 @@ a:hover {
 	padding: 1em 0em;
 	width: 100%;
 	border-bottom: solid 1px #cacaca;
-	margin-bottom: 40px;
+	margin-bottom: 36px;
 }
-
 .site-title {
-	font-size: 1.5rem;
-	letter-spacing: -1px;
+	font-size: 1.75rem;
+	letter-spacing: -2px;
 	font-weight: 700;
 	vertical-align: text-bottom;
 	line-height: 1.5;
-	padding: 0.5em 0;
+	padding: 0.1em 0;
 }
-
 .menu > ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 }
-
 .menu__item {
-	padding: 1em;
-	font-size: 1.125rem;
+	padding: 1em 0 1em 1.5em;
+	font-size: 1rem;
 	font-weight: normal;
-	color: #32383d;
+	color: #2b2b2b;
 	font-family: 'Lato';
 }
-
 /* Slider */
-
 .title {
  text-align: center;
   margin: auto;
@@ -89,7 +85,6 @@ a:hover {
   display: inline-block;
   position: relative;
 }
-
 .slider {
   margin: auto;
   width: 1600px;
@@ -99,7 +94,6 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
-
 .slider__image-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,20 +108,18 @@ a:hover {
   padding: 0;
   transition: all 1s;
 }
-
 .slider__image {
   list-style: none;
   display: inline-block;
   min-width: 1600px;
   height: 1000px;
+  margin-top: -150px;
   background-size: cover;
 }
-
 .slider__image img {
   min-width: 100%;
   max-height: 1000px;
 }
-
 .btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,7 +133,6 @@ a:hover {
   height: 100%;
   width: 100%;
 }
-
 .btn {
   min-height: 100%;
   position: relative;
@@ -152,7 +143,6 @@ a:hover {
   font-size: 2rem;
   transition: background 0.2s;
 }
-
 .btn:hover {
   background: rgba(255,255,255,0.9);
 }

@@ -20,7 +20,8 @@ del = require('del'),
 debug = require('gulp-debug'),
 rev = require('gulp-rev'),
 beautify = require('gulp-jsbeautify'),
-eslint = require('gulp-eslint');
+eslint = require('gulp-eslint'),
+htmlPrettify = require('gulp-html-prettify');
 
 // Default task that runs on 'Gulp' command
 
@@ -55,6 +56,12 @@ gulp.start('cssInject');
   //  .pipe(beautify({indentSize: 2}))
    // .pipe(gulp.dest('app/assets/scripts/app.js'));
 //});
+
+gulp.task('formatHtml', function() {
+  gulp.src('app/index.html')
+    .pipe(htmlPrettify({indent_char: ' ', indent_size: 2}))
+    .pipe(gulp.dest('dist/index.html'))
+});
 
 watch('app/assets/scripts/**/*.js', function(){
   gulp.start('eslint')
@@ -148,7 +155,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
 
 // Build final
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimiseImages', 'usemin']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimiseImages', 'usemin', 'formatHtml']);
 
 // Usemin
 
