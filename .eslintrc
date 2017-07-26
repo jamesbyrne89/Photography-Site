@@ -5,7 +5,7 @@
 	"node": true
 	},
 
-	"extends": "eslint:recommended",
+	"extends": "airbnb",
 
 	"parser": "babel-eslint",
 
@@ -17,7 +17,9 @@
 	"rules": {
 		"indent": [2,2],
 		"linebreak-style": [2, "unix"],
-		"quotes": [2, "single"],
-		"semi": [2, "always"]
+		"quotes": [1, "single"],
+		"semi": [2, "always"],
+		"func-names": ["error", "never"],
+		"no-unused-vars": [1, {"vars": "local", "args": "none"}]
 	}
 }
