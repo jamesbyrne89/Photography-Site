@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp'),
 watch = require('gulp-watch'),
 postcss = require('gulp-postcss'),
@@ -17,11 +19,12 @@ es2015 = require('babel-preset-es2015'),
 del = require('del'),
 debug = require('gulp-debug'),
 rev = require('gulp-rev'),
-beautify = require('gulp-jsbeautify');
+beautify = require('gulp-jsbeautify'),
+eslint = require('gulp-eslint');
 
 // Default task that runs on 'Gulp' command
 
-gulp.task('default', ['cssInject', 'compilecss', 'watch']);
+gulp.task('default', ['cssInject', 'compilecss', 'watch', 'eslint']);
 
 
 gulp.task('watch', function(){
@@ -53,6 +56,23 @@ gulp.start('cssInject');
    // .pipe(gulp.dest('app/assets/scripts/app.js'));
 //});
 
+watch('app/assets/scripts/**/*.js', function(){
+  gulp.start('eslint')
+  browserSync.reload();
+});
+
+watch('app/assets/scripts/**/*.js', function(){
+  gulp.start('babel');
+});
+
+gulp.task('eslint', function() {
+  return gulp.src(
+    'app/assets/scripts/**/*.js'
+    )
+    .pipe(eslint())
+    .pipe(eslint.format());
+  });
+
 // Live reload browserSync
 
 watch('app/index.html', function(){
@@ -76,8 +96,6 @@ gulp.task('cssInject', ['compilecss'], function(){
   .pipe(browserSync.stream());
 
 });
-
-
 
 // Optimise images
 gulp.task('optimiseImages', function(){
