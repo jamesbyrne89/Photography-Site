@@ -68,25 +68,22 @@ a:hover {
 }
 .site-title {
 	font-size: 1.875rem;
-  font-weight: 900;
+  font-weight: 400;
 	vertical-align: text-bottom;
 	padding: 1em 0;
   font-style: italic;
-}
-.site-title span {
-	font-weight: 400;
 }
 .site-title a:hover {
 	color: #2b2b2b;
 }
 .sec-title {
-    font-weight: 400;
+    font-weight: 900 !important;
     font-style: normal;
     text-transform: uppercase;
-    font-family: 'montserrat';
-    font-size: 0.48em;
+    font-family: 'fira sans';
+    font-size: 0.4em;
     line-height: 1.675;
-    letter-spacing: 6px;
+    letter-spacing: 0.6em;
     display: block;
     text-align: center;
   }
@@ -102,10 +99,10 @@ a:hover {
 }
 .menu__item {
 	padding: 0.375em;
-	font-size: 0.75rem;
-	font-weight: 300;
+	font-size: 0.875rem;
+	font-weight: 400;
 	color: #2b2b2b;
-	font-family: 'Montserrat';
+	font-family: 'fira sans';
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: right;
@@ -270,7 +267,7 @@ a:hover {
   position: relative;
   top: 40px;
   text-transform: uppercase;
-  font-family: 'Montserrat';
+  font-family: 'fira sans';
   letter-spacing: 3px;
   color: #fff;
   font-size: 0.75rem;
@@ -282,12 +279,13 @@ a:hover {
   text-align: center;
   padding-top: 100px;
   margin-bottom: 75px;
-  font-family: 'Montserrat';
+  font-family: 'fira sans';
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 8px;
   font-size: 1.25rem;
   display: inline-block;
   margin: auto;
+  font-weight: 700;
 }
 .profile-title::after {
   content: '';
