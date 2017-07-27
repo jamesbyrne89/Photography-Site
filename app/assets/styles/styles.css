@@ -1,6 +1,7 @@
 $primaryFontColour: #2b2b2b;
 $bronze: #9E2F00;
 $deepPurple: #401935;
+$orangeRed: #ff3530;
 
 
 * {
@@ -18,10 +19,13 @@ body {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	max-height: 100vh;
-	overflow: hidden;
-	font-family: 'asul', georgia;
+	font-family: 'Asul', georgia;
 	color: $primaryFontColour;
+}
+
+main {
+  background: #F5F4F0;
+  min-height: 80vh;
 }
 
 a, a:visited {
@@ -30,50 +34,56 @@ color: inherit;
 }
 
 a {
-	border-bottom: solid 2px $deepPurple;
+	border-bottom: solid 0px $orangeRed;
 	transition: all 0.1s;
 	line-height: 0.5;
 }
 
 a:hover {
 	border: 0;
-	color: $deepPurple;
+	color: $orangeRed;
 }
 
 .container {
-	width: 1640px;
+	width: 100%;
 	padding: 0 20px;
 }
 
 .header {
 	display: flex;
 	justify-content: space-between;
-	padding: 1em 0em;
+  align-items: center;
+	padding: 0.25em 0em 0em 0em;
 	width: 100%;
 	border-bottom: solid 1px #cacaca;
-	margin-bottom: 36px;
+	margin-bottom: 2vh;
+  height: 12vh;
 }
 
 .site-title {
-	font-size: 1.75rem;
-	letter-spacing: -2px;
+	font-size: 1.5rem;
 	font-weight: 700;
+  letter-spacing: -2px;
 	vertical-align: text-bottom;
 	line-height: 1.5;
-	padding: 0.1em 0;
+	padding: 1em 0;
 }
 
 .menu > ul {
 	display: flex;
+  flex-direction: column;
 	list-style: none;
 }
 
 .menu__item {
-	padding: 1em 0 1em 1.5em;
-	font-size: 1rem;
-	font-weight: normal;
+	padding: 0.375em;
+	font-size: 0.75rem;
+	font-weight: 300;
 	color: $primaryFontColour;
-	font-family: 'Lato';
+	font-family: 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: right;
 }
 
 
@@ -92,8 +102,8 @@ a:hover {
 
 .slider {
   margin: auto;
-  width: 1600px;
-  height: 1000px;
+  width: 100%;
+  height: 80vh;
   background: #fff;
   display: block;
   position: relative;
@@ -116,17 +126,17 @@ a:hover {
 }
 
 .slider__image {
+  position: relative;
   list-style: none;
   display: inline-block;
-  min-width: 1600px;
-  height: 1000px;
-  margin-top: -150px;
+  min-width: 100%;
+  max-height: 100%;
   background-size: cover;
 }
 
  .slider__image img {
-  min-width: 100%;
-  max-height: 1000px;
+  object-fit: cover;
+  margin-top: -2%;
 }
 
 
@@ -153,4 +163,92 @@ a:hover {
 .btn:hover {
   background: rgba(255,255,255,0.9);
 }
+
+/* Albums Grid */
+
+
+.albums-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 80vh;
+  background: #fff;
+}
+
+.album-tile {
+  background: lightblue;
+   flex: 0 1 300px;
+  height: 500px;
+  margin: 8px;
+  background-size: cover;
+  position: relative;
+}
+
+.hong-kong {
+    background-image: url('../../../assets/images/content/hong-kong/hk-tile-cover.jpg');
+    background-position: center;
+}
+
+.barca {
+    background-image: url('../../../assets/images/content/barcelona/barca-tile-cover.jpg');
+    background-position: center;
+}
+
+.istanbul {
+    background-image: url('../../../assets/images/content/istanbul/istanbul-tile-cover.jpg');
+    background-position: center;
+}
+
+.stockholm {
+    background-image: url('../../../assets/images/content/stockholm/stockholm-tile-cover.jpg');
+    background-position: center;
+}
+
+.ontario {
+    background-image: url('../../../assets/images/content/ontario/ontario-tile-cover.jpg');
+    background-position: center;
+}
+
+.valencia {
+    background-image: url('../../../assets/images/content/valencia/valencia-tile-cover.jpg');
+}
+
+.album-tile__title {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  font-family: 'playfair display';
+}
+
+.album-tile__title::after {
+  content: '';
+  position: relative;
+  top: 20px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  display: block;
+
+}
+
+.album-tile__category {
+  text-align: center;
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 40px;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  letter-spacing: 3px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+
+
 

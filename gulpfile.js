@@ -15,12 +15,12 @@ imageminJPEG = require('imagemin-jpeg-recompress'),
 cssImport = require('postcss-import'),
 usemin = require('gulp-usemin'),
 babel = require('gulp-babel'),
-es2015 = require('babel-preset-es2015'),
+es2015 = require('babel-preset-es2015'),eslint = require('gulp-eslint'),
+
 del = require('del'),
 debug = require('gulp-debug'),
 rev = require('gulp-rev'),
 beautify = require('gulp-jsbeautify'),
-eslint = require('gulp-eslint'),
 htmlPrettify = require('gulp-html-prettify');
 
 // Default task that runs on 'Gulp' command
@@ -82,7 +82,7 @@ gulp.task('eslint', function() {
 
 // Live reload browserSync
 
-watch('app/index.html', function(){
+watch('app/**/*.html', function(){
   browserSync.reload();
 });
 

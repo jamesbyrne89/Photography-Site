@@ -1,25 +1,25 @@
 const slide = (function slide () {
 
 var urls = [
-  "https://farm5.staticflickr.com/4211/35813360365_ef3618947a_k.jpg",
-  "https://farm5.staticflickr.com/4253/35681172231_8a97190212_k.jpg",
-  "https://farm1.staticflickr.com/768/22718261258_6ecd122356_k.jpg",
-  "https://unsplash.it/1600/500"
+  'https://farm5.staticflickr.com/4211/35813360365_ef3618947a_k.jpg',
+  'https://farm5.staticflickr.com/4253/35681172231_8a97190212_k.jpg',
+  'https://farm1.staticflickr.com/768/22718261258_6ecd122356_k.jpg',
+  'https://unsplash.it/1600/500'
 ];
 
-var images = document.getElementsByClassName("slider__image");
-var slider = document.getElementById("js-slider");
-var imageWrapper = document.getElementById("js-image-wrapper");
-var btnWrapper = document.getElementById("js-btn-wrapper");
-var index = 0;
-var imageOffset;
+const images = document.getElementsByClassName('slider__image');
+const slider = document.getElementById('js-slider');
+const imageWrapper = document.getElementById('js-image-wrapper');
+const btnWrapper = document.getElementById('js-btn-wrapper');
+let index = 0;
+let imageOffset;
 
 (function() {
   
   for (let i=0; i < images.length; i++) {
     images[i].childNodes[0].setAttribute('src', urls[i]);
   }
-  
+
   imageOffset = index * 1600;
   index++;
   imageWrapper.style.left = `-${imageOffset}px`;
@@ -29,19 +29,19 @@ var imageOffset;
 })();
 
 
-function moveLeft(){
-  index--;
-  imageOffset = index * 1600;  
-  imageWrapper.style.left = `-${imageOffset}px`;
-}
+  function moveLeft(){
+    index--;
+    imageOffset = index * 1600;  
+    imageWrapper.style.left = `-${imageOffset}px`;
+  };
 
-function moveRight(){
-  index++;
-  imageOffset = index * 1600;  
-  imageWrapper.style.left = `-${imageOffset}px`;
-}
+  function moveRight(){
+    index++;
+    imageOffset = index * 1600;  
+    imageWrapper.style.left = `-${imageOffset}px`;
+  };
 
-document.getElementById("js-left-btn").addEventListener("click", function() {
+document.getElementById('js-left-btn').addEventListener('click', function() {
   if (index > 0) {
     moveLeft();
   } else {
@@ -51,7 +51,7 @@ document.getElementById("js-left-btn").addEventListener("click", function() {
   }
 });
 
-document.getElementById("js-right-btn").addEventListener("click", function() {
+document.getElementById('js-right-btn').addEventListener('click', function() {
   if (index === images.length -1) {
     index = 0;
     imageOffset = index * 1600;
@@ -63,11 +63,11 @@ document.getElementById("js-right-btn").addEventListener("click", function() {
 
 slider.addEventListener('mouseover', function(){
   btnWrapper.style.opacity = 0;
-})
+});
 
 slider.addEventListener('mouseleave', function(){
   btnWrapper.style.opacity = 0;
-})
+});
 
 })();
 
