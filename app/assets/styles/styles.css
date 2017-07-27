@@ -46,7 +46,7 @@ a:hover {
 
 .container {
 	width: 100%;
-	padding: 0 20px;
+	padding: 0 2em;
 }
 
  .hero-image {
@@ -120,7 +120,7 @@ p {
 }
 
 .active {
-  transform: translateX(50vw);
+  transform: translateX(180px);
    transition: all 0.3s;
 }
 
@@ -139,12 +139,15 @@ p {
     position: absolute;
     z-index: 10;
     height: 100%;
-    width: 50vw;
+    width: 180px;
     top: 0;
-    left: -50vw;
+    left: -180px;
     background: #fff;
      transition: all 0.3s;
      font-size: 2rem;
+    -webkit-box-shadow: 2px 0px 3px 0px rgba(202,202,202,0.7);
+    -moz-box-shadow: 2px 0px 3px 0px rgba(202,202,202,0.7);
+    box-shadow: 2px 0px 3px 0px rgba(202,202,202,0.7);
   }
 
   .menu > ul {
@@ -152,6 +155,13 @@ p {
     flex-direction: column;
     justify-content: center;
      align-items: center;
+     width: 90%;
+     height: 100vh;
+     border-right: solid 1px #cacaca;
+  }
+
+  .menu__item {
+  	margin-bottom: 20px;
   }
 
 }
