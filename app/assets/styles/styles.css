@@ -19,13 +19,17 @@ body {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	font-family: 'Asul', georgia;
+	font-family: 'Playfair Display', georgia;
 	color: $primaryFontColour;
+
 }
 
 main {
   background: #F5F4F0;
-  min-height: 80vh;
+  min-height: 85vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
 a, a:visited {
@@ -35,7 +39,7 @@ color: inherit;
 
 a {
 	border-bottom: solid 0px $orangeRed;
-	transition: all 0.1s;
+	transition: all 0.2s;
 	line-height: 0.5;
 }
 
@@ -49,25 +53,46 @@ a:hover {
 	padding: 0 20px;
 }
 
+/* Site Header */
+
 .header {
 	display: flex;
 	justify-content: space-between;
   align-items: center;
-	padding: 0.25em 0em 0em 0em;
+	padding: 0.5em 0em 0em 0em;
 	width: 100%;
 	border-bottom: solid 1px #cacaca;
 	margin-bottom: 2vh;
-  height: 12vh;
+  height: 10vh;
+  min-height: 100px;
+
 }
 
 .site-title {
-	font-size: 1.5rem;
-	font-weight: 700;
-  letter-spacing: -2px;
+	font-size: 1.875rem;
+  font-weight: 900;
 	vertical-align: text-bottom;
-	line-height: 1.5;
 	padding: 1em 0;
+  font-style: italic;
+  span {
+    font-weight: 400;
+  }
+  a:hover {
+    color: $primaryFontColour;
+  }
 }
+
+ .sec-title {
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: 'montserrat';
+    font-size: 0.48em;
+    line-height: 1.675;
+    letter-spacing: 6px;
+    display: block;
+    text-align: center;
+  }
 
 .menu > ul {
 	display: flex;
@@ -84,6 +109,18 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: right;
+}
+
+ .hero-image {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-image: url("../../../assets/images/content/barcelona/35813360365_e87e752a18_o.jpg");
+  background-position: 0 95%;
+  background-size: cover;
 }
 
 
@@ -103,7 +140,7 @@ a:hover {
 .slider {
   margin: auto;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background: #fff;
   display: block;
   position: relative;
@@ -131,12 +168,13 @@ a:hover {
   display: inline-block;
   min-width: 100%;
   max-height: 100%;
-  background-size: cover;
 }
 
  .slider__image img {
-  object-fit: cover;
-  margin-top: -2%;
+  position: relative;
+  max-width: 100vw;
+  object-fit: contain;
+  bottom: 0px;
 }
 
 
@@ -170,8 +208,9 @@ a:hover {
 .albums-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  min-height: 80vh;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 85vh;
   background: #fff;
 }
 
@@ -179,7 +218,7 @@ a:hover {
   background: lightblue;
    flex: 0 1 300px;
   height: 500px;
-  margin: 8px;
+  margin: 16px 8px;
   background-size: cover;
   position: relative;
 }
@@ -250,5 +289,41 @@ a:hover {
 }
 
 
+/* Profile Page */
+
+.profile-title {
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 75px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.25rem;
+  display: inline-block;
+  margin: auto;
+}
+
+.profile-title::after {
+  content: '';
+  position: relative;
+  top: 20px;
+  left: 0;
+  width: 97%;
+  height: 2px;
+  background: $primaryFontColour;
+  display: block;
+  margin-bottom: 100px;
+
+}
+
+p {
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: 'playfair display', georgia, serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
 
 

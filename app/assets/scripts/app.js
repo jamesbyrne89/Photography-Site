@@ -1,9 +1,10 @@
 const slide = (function slide () {
 
 var urls = [
-  'https://farm5.staticflickr.com/4211/35813360365_ef3618947a_k.jpg',
+  '../../assets/images/content/barcelona/35813360365_e87e752a18_o.jpg',
   'https://farm5.staticflickr.com/4253/35681172231_8a97190212_k.jpg',
   'https://farm1.staticflickr.com/768/22718261258_6ecd122356_k.jpg',
+
   'https://unsplash.it/1600/500'
 ];
 
@@ -68,6 +69,8 @@ slider.addEventListener('mouseover', function(){
 slider.addEventListener('mouseleave', function(){
   btnWrapper.style.opacity = 0;
 });
+
+
 
 })();
 

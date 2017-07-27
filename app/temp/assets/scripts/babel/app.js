@@ -2,7 +2,7 @@
 
 var slide = function slide() {
 
-  var urls = ['https://farm5.staticflickr.com/4211/35813360365_ef3618947a_k.jpg', 'https://farm5.staticflickr.com/4253/35681172231_8a97190212_k.jpg', 'https://farm1.staticflickr.com/768/22718261258_6ecd122356_k.jpg', 'https://unsplash.it/1600/500'];
+  var urls = ['../../assets/images/content/barcelona/35813360365_e87e752a18_o.jpg', 'https://farm5.staticflickr.com/4253/35681172231_8a97190212_k.jpg', 'https://farm1.staticflickr.com/768/22718261258_6ecd122356_k.jpg', 'https://unsplash.it/1600/500'];
 
   var images = document.getElementsByClassName('slider__image');
   var slider = document.getElementById('js-slider');
