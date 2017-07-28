@@ -151,40 +151,39 @@
       -ms-flex-align: center;
           align-items: center;
   min-height: 85vh;
-  background: #fff;
 }
 .album-tile {
   background: lightblue;
-   -webkit-box-flex: 0;
-       -ms-flex: 0 1 300px;
-           flex: 0 1 300px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
   height: 500px;
-  margin: 16px 8px;
+  margin: 1.25em;
   background-size: cover;
   position: relative;
 }
 .hong-kong {
-    background-image: url('../../../assets/images/content/hong-kong/hk-tile-cover.jpg');
-    background-position: center;
+  background-image: url('../../../assets/images/content/hong-kong/hk-tile-cover.jpg');
+  background-position: center;
 }
 .barca {
-    background-image: url('../../../assets/images/content/barcelona/barca-tile-cover.jpg');
-    background-position: center;
+  background-image: url('../../../assets/images/content/barcelona/barca-tile-cover.jpg');
+  background-position: center;
 }
 .istanbul {
-    background-image: url('../../../assets/images/content/istanbul/istanbul-tile-cover.jpg');
-    background-position: center;
+  background-image: url('../../../assets/images/content/istanbul/istanbul-tile-cover.jpg');
+  background-position: center;
 }
 .stockholm {
-    background-image: url('../../../assets/images/content/stockholm/stockholm-tile-cover.jpg');
-    background-position: center;
+  background-image: url('../../../assets/images/content/stockholm/stockholm-tile-cover.jpg');
+  background-position: center;
 }
 .ontario {
-    background-image: url('../../../assets/images/content/ontario/ontario-tile-cover.jpg');
-    background-position: center;
+  background-image: url('../../../assets/images/content/ontario/ontario-tile-cover.jpg');
+  background-position: center;
 }
 .valencia {
-    background-image: url('../../../assets/images/content/valencia/valencia-tile-cover.jpg');
+  background-image: url('../../../assets/images/content/valencia/valencia-tile-cover.jpg');
 }
 .album-tile__title {
   width: 100%;
@@ -204,7 +203,6 @@
   height: 2px;
   background: #fff;
   display: block;
-
 }
 .album-tile__category {
   text-align: center;
@@ -226,23 +224,11 @@
   bottom: 0;
   right: 0;
   display: block;
-}
-.album-tile__overlay::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 0;
-  position: relative;
-  top: 480px;
-  left: 0;
-  background: #ff3530;
-  transition: width 0.5s;
-}
-.album-tile__overlay:hover::after {
-  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s;
 }
 .album-tile__overlay:hover {
-
+  background: rgba(0, 0, 0, 0.3);
 }
 /* Photo Grid */
 .photo-grid {
@@ -263,26 +249,29 @@
   margin: 40px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.15s;
+}
+.photo-square:hover {
+  box-shadow: 0px 0px 10px 0px rgba(202, 202, 202, 1.0);
 }
 ::-moz-selection {
-	background: #2b2b2b;
-	color: #fff;
+  background: #2b2b2b;
+  color: #fff;
 }
 ::selection {
-	background: #2b2b2b;
-	color: #fff;
+  background: #2b2b2b;
+  color: #fff;
 }
 body {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	width: 100%;
-	font-family: 'Playfair Display', georgia;
-	color: #2b2b2b;
-
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-family: 'Playfair Display', georgia;
+  color: #2b2b2b;
 }
 main {
   background: #F5F4F0;
@@ -291,23 +280,24 @@ main {
   overflow: hidden;
   position: relative;
 }
-a, a:visited {
-text-decoration: none;
-color: inherit;
-width: auto;
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  width: auto;
 }
 a {
-	border-bottom: solid 0px #ff3530;
-	transition: all 0.2s;
-	line-height: 0.5;
+  border-bottom: solid 0px #ff3530;
+  transition: all 0.2s;
+  line-height: 0.5;
 }
 a:hover {
-	border: 0;
-	color: #ff3530;
+  border: 0;
+  color: #ff3530;
 }
 .container {
-	width: 100%;
-	padding: 0 2em;
+  width: 100%;
+  padding: 0 2em;
 }
 .hero-image {
   position: relative;
@@ -344,27 +334,26 @@ a:hover {
   background: #2b2b2b;
   display: block;
   margin-bottom: 100px;
-
 }
 p {
   width: 80%;
   max-width: 500px;
-  margin: 40px auto;
+  margin: 36px auto;
   font-family: 'playfair display', georgia, serif;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.52;
 }
 /* Mobile menu */
 .mobile-menu-btn {
-	display: none;
+  display: none;
+  cursor: pointer;
 }
 .active {
-  -webkit-transform: translateX(180px);
-          transform: translateX(180px);
-   transition: all 0.3s;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  transition: all 0.3s;
 }
-@media (max-width: 500px) {
-
+@media (max-width:500px) {
   .container {
     padding: 0;
   }
@@ -374,31 +363,31 @@ p {
   }
 
   .mobile-menu-btn {
-  	display: block;
-  width: 30px;
-  height: 30px;
-}
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
 
-.mobile-menu-btn .bar {
-  display: block;
-  background: #000;
-  height: 1px;
-  width: 100%;
-  margin-top: 8px;
-  margin-left: 0;
-}
+  .mobile-menu-btn .bar {
+    display: block;
+    background: #000;
+    height: 1px;
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 0;
+  }
 
   .menu {
     position: absolute;
     z-index: 10;
     height: 100%;
-    width: 180px;
+    width: 200px;
     top: 0;
-    left: -180px;
+    left: -200px;
     background: #fff;
-     transition: all 0.3s;
-     font-size: 2rem;
-    box-shadow: 2px 0px 3px 0px rgba(202,202,202,0.7);
+    transition: all 0.3s;
+    font-size: 2rem;
+    box-shadow: 2px 0px 3px 0px rgba(202, 202, 202, 0.7);
   }
 
   .menu > ul {
@@ -409,21 +398,20 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-     -webkit-box-align: center;
-         -ms-flex-align: center;
-             align-items: center;
-     width: 90%;
-     height: 100vh;
-     border-right: solid 1px #cacaca;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    height: 100vh;
+    padding-top: 20vh;
+    border-right: solid 1px #cacaca;
   }
 
   .menu__item {
-  	margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
 }
-
-

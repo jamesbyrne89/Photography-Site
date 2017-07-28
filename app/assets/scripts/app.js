@@ -1,8 +1,13 @@
+const mobileBtn = document.getElementById('js-mobile-menu-btn');
+const mobileDrawer = document.getElementById('js-mobile-menu-drawer');
 
+
+mobileBtn.addEventListener('click', function(){
+  mobileDrawer.classList.toggle('active');
+})
 
 $('.photo-square').featherlight($content, configuration);
 
-console.log($.featherlight.defaults)
 // const slide = (function slide () {
 
 // var urls = [
@@ -79,11 +84,5 @@ console.log($.featherlight.defaults)
 
 // })();
 
-const mobileBtn = document.getElementById('js-mobile-menu-btn');
-const mobileDrawer = document.getElementById('js-mobile-menu-drawer');
 
-
-mobileBtn.addEventListener('click', function(){
-  mobileDrawer.classList.toggle('active');
-})
 
