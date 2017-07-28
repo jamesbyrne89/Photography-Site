@@ -1,3 +1,8 @@
+
+
+$('.photo-square').featherlight($content, configuration);
+
+console.log($.featherlight.defaults)
 // const slide = (function slide () {
 
 // var urls = [

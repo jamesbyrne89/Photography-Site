@@ -83,3 +83,52 @@
   font-size: 0.75rem;
   font-weight: 500;
 }
+
+.album-tile__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+
+.album-tile__overlay::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  position: relative;
+  top: 480px;
+  left: 0;
+  background: $orangeRed;
+  transition: width 0.5s;
+}
+
+.album-tile__overlay:hover::after {
+  width: 100%;
+}
+
+.album-tile__overlay:hover {
+
+}
+
+
+
+/* Photo Grid */
+
+.photo-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: auto;
+  margin-bottom: 75px;
+}
+
+.photo-square {
+  width: 280px;
+  height: 280px;
+  margin: 40px;
+  object-fit: cover;
+}
