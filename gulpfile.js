@@ -140,6 +140,7 @@ gulp.task('compressScripts', ['babel', 'deleteDistFolder'], function(){
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
   var pathsToCopy = [
     './app/**/*',
+    './app/assets/images/content',
     '!./app/index.html',
     '!./app/assets/images/**',
     '!./app/assets/styles/styles.css',
@@ -170,6 +171,32 @@ gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
   }))
 
   .pipe(gulp.dest('docs'));
+});
+
+gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
+  return gulp.src('app/about/index.html')
+  .pipe(usemin({
+    css: [function(){return rev()},
+    function(){return cssNano()}],
+    js: [function() {return rev()}, function() {return uglify()
+      .pipe(debug())
+    }]
+  }))
+
+  .pipe(gulp.dest('docs/about'));
+});
+
+gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
+  return gulp.src('app/buy-prints/index.html')
+  .pipe(usemin({
+    css: [function(){return rev()},
+    function(){return cssNano()}],
+    js: [function() {return rev()}, function() {return uglify()
+      .pipe(debug())
+    }]
+  }))
+
+  .pipe(gulp.dest('docs/buy-prints'));
 });
 
 // Preview final build in browserSync

@@ -4,6 +4,7 @@
 
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Asul:400,700|Fira+Sans:300,400,700,900|Playfair+Display:400,400i,700,900,900i" rel="stylesheet">
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.7/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <!-- build:css assets/styles/styles.css -->
   <link rel="stylesheet" href="/temp/assets/styles/styles.css">
   <!-- endBuild -->
@@ -17,13 +18,18 @@
   <div class="container">
     <header class="header">
       <h1 class="site-title"><a href="/">James Byrne<span class="sec-title">Photography</span></a></h1>
-      <nav class="menu">
+      <div id='js-mobile-menu-btn' class='mobile-menu-btn'>
+        <span class='bar'></span>
+        <span class='bar'></span>
+        <span class='bar'></span>
+      </div>
+      <nav id='js-mobile-menu-drawer' class="menu">
         <ul>
-          <li class='menu__item'><a href='./albums'>Albums</a>
+          <li class='menu__item'><a href='./about'>About</a>
           </li>
-          <li class='menu__item'><a href='./profile'>Profile</a>
+          <li class='menu__item'><a href='./portfolio'>Portfolio</a>
           </li>
-          <li class='menu__item'><a href='./prints'>Prints</a>
+          <li class='menu__item'><a href='./buy-prints'>Buy Prints</a>
           </li>
         </ul>
       </nav>
@@ -36,6 +42,7 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.7/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 <!-- build:js assets/scripts/app.js -->
 <script src="assets/scripts/app.js"></script>
 <!-- endBuild -->
