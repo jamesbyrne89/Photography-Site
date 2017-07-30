@@ -1,5 +1,5 @@
-const mobileBtn = document.getElementById('js-mobile-menu-btn');
-const mobileDrawer = document.getElementById('js-mobile-menu-drawer');
+var mobileBtn = document.getElementById('js-mobile-menu-btn');
+var mobileDrawer = document.getElementById('js-mobile-menu-drawer');
 
 
 mobileBtn.addEventListener('click', function(){
