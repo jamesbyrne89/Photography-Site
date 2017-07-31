@@ -13,16 +13,18 @@
     <title>Valencia | James Byrne Photography.</title>
 </head>
 <body>
+<div id='js-darken' class="darken hidden"></div>
 <!-- HEADER -->
 <div class="container">
-  <header class="header">
+  <header id='header' class="header">
     <h1 class="site-title"><a href="/">James Byrne<span class="sec-title">Photography</span></a></h1>
-    <div id='js-mobile-menu-btn' class='mobile-menu-btn'>
+    <button id='js-mobile-menu-btn' class='mobile-menu-btn'>
       <span class='bar'></span>
       <span class='bar'></span>
       <span class='bar'></span>
-    </div>    
+    </button>    
     <nav id='js-mobile-menu-drawer' class="menu">
+      <button id='js-menu-close-btn' class="mobile-menu__close-btn">⟶</button>
       <ul>
         <li class='menu__item'><a href='/about'>About</a></li>
         <li class='menu__item'><a href='/portfolio'>Portfolio</a></li>
@@ -32,13 +34,16 @@
   </header>
   <!-- MAIN -->
   <main>
+    <section class='primary'>
     <h2 class='section-heading'>Valencia</h2>
     <div class="photo-grid">
-      <a href='/assets/images/content/valencia/14876696071_e7f143e62b_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/valencia/14876696071_e7f143e62b_o.jpg'></a>
-      <a href='/assets/images/content/valencia/14876712731_0d021642c2_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/valencia/14876712731_0d021642c2_o.jpg'></a>
-      <a href='/assets/images/content/valencia/14879717455_4c3bd59bcb_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/valencia/14879717455_4c3bd59bcb_o.jpg'></a>
-      <a href='/assets/images/content/valencia/14693059940_a2808b5999_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/valencia/14693059940_a2808b5999_o.jpg'></a>
+      <a href='/assets/images/content/valencia/14876696071_e7f143e62b_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/valencia/14876696071_e7f143e62b_o.jpg'></a>
+      <a href='/assets/images/content/valencia/14876712731_0d021642c2_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/valencia/14876712731_0d021642c2_o.jpg'></a>
+      <a href='/assets/images/content/valencia/14879717455_4c3bd59bcb_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/valencia/14879717455_4c3bd59bcb_o.jpg'></a>
+      <a href='/assets/images/content/valencia/14693059940_a2808b5999_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/valencia/14693059940_a2808b5999_o.jpg'></a>
     </div>
+    </section>
+    <button id='js-back-to-top' class='back-to-top'><a href='#header'>↥</a></button>
   </main>
 </div>
 </body>

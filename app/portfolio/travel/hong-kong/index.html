@@ -13,16 +13,18 @@
     <title>James Byrne Photography.</title>
 </head>
 <body>
+<div id='js-darken' class="darken hidden"></div>
 <!-- HEADER -->
 <div class="container">
-  <header class="header">
+  <header id='header' class="header">
     <h1 class="site-title"><a href="/">James Byrne<span class="sec-title">Photography</span></a></h1>
-    <div id='js-mobile-menu-btn' class='mobile-menu-btn'>
+    <button id='js-mobile-menu-btn' class='mobile-menu-btn'>
       <span class='bar'></span>
       <span class='bar'></span>
       <span class='bar'></span>
-    </div>    
+    </button>    
     <nav id='js-mobile-menu-drawer' class="menu">
+    <button id='js-menu-close-btn' class="mobile-menu__close-btn">⟶</button>
       <ul>
         <li class='menu__item'><a href='/about'>About</a></li>
         <li class='menu__item'><a href='/portfolio'>Portfolio</a></li>
@@ -32,21 +34,24 @@
   </header>
   <!-- MAIN -->
   <main>
+  <section class='primary'>
     <h2 class='section-heading'>Hong Kong</h2>
     <div class="photo-grid">
-      <a href='/assets/images/content/hong-kong/22514151874_01d5fd62ef_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/22514151874_01d5fd62ef_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/22515671603_da7c01fafd_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/22515671603_da7c01fafd_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/22515955603_ccb5703995_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/22515955603_ccb5703995_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/22756598759_8453c4a7be_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/22756598759_8453c4a7be_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/22718464538_08351da520_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/22718464538_08351da520_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/23119256266_43ff5d645f_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/23119256266_43ff5d645f_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/23123008822_7b9a21ca59_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/23123008822_7b9a21ca59_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/hk-tile-cover.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/hk-tile-cover.jpg'></a>
-      <a href='/assets/images/content/hong-kong/23164159641_4507a8fd77_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/23164159641_4507a8fd77_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/23134961912_6bdd5f1df7_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/23134961912_6bdd5f1df7_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/23148454591_0fb896b44d_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/23148454591_0fb896b44d_o.jpg'></a>
-      <a href='/assets/images/content/hong-kong/23148601991_b19025a0a0_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/hong-kong/23148601991_b19025a0a0_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/22514151874_01d5fd62ef_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/22514151874_01d5fd62ef_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/22515671603_da7c01fafd_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/22515671603_da7c01fafd_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/22515955603_ccb5703995_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/22515955603_ccb5703995_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/22756598759_8453c4a7be_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/22756598759_8453c4a7be_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/22718464538_08351da520_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/22718464538_08351da520_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/23119256266_43ff5d645f_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/23119256266_43ff5d645f_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/23123008822_7b9a21ca59_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/23123008822_7b9a21ca59_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/hk-tile-cover.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/hk-tile-cover.jpg'></a>
+      <a href='/assets/images/content/hong-kong/23164159641_4507a8fd77_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/23164159641_4507a8fd77_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/23134961912_6bdd5f1df7_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/23134961912_6bdd5f1df7_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/23148454591_0fb896b44d_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/23148454591_0fb896b44d_o.jpg'></a>
+      <a href='/assets/images/content/hong-kong/23148601991_b19025a0a0_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/hong-kong/23148601991_b19025a0a0_o.jpg'></a>
     </div>
+    </section>
+    <button id='js-back-to-top' class='back-to-top'><a href='#header'>↥</a></button>
   </main>
 </div>
 </body>

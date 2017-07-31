@@ -13,9 +13,10 @@
     <title>Istanbul | James Byrne Photography.</title>
 </head>
 <body>
+<div id='js-darken' class="darken hidden"></div>
 <!-- HEADER -->
 <div class="container">
-  <header class="header">
+  <header id='header' class="header">
     <h1 class="site-title"><a href="/">James Byrne<span class="sec-title">Photography</span></a></h1>
     <div id='js-mobile-menu-btn' class='mobile-menu-btn'>
       <span class='bar'></span>
@@ -23,6 +24,7 @@
       <span class='bar'></span>
     </div>    
     <nav id='js-mobile-menu-drawer' class="menu">
+    <button id='js-menu-close-btn' class="mobile-menu__close-btn">⟶</button>
       <ul>
         <li class='menu__item'><a href='/about'>About</a></li>
         <li class='menu__item'><a href='/portfolio'>Portfolio</a></li>
@@ -32,19 +34,20 @@
   </header>
   <!-- MAIN -->
   <main>
+  <section class='primary'>
     <h2 class='section-heading'>Istanbul</h2>
     <div class="photo-grid">
-      <a href='/assets/images/content/istanbul/22718388378_040f6f70ff_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22718388378_040f6f70ff_o.jpg'></a>
-      <a href='/assets/images/content/istanbul/22718368918_0672672b4f_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22718368918_0672672b4f_o.jpg'></a>
-      <a href='/assets/images/content/istanbul/22816475160_1eaa91a2eb_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22816475160_1eaa91a2eb_o.jpg'></a>
-      <a href='/assets/images/content/istanbul/22718189267_1f2812bfd7_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22718189267_1f2812bfd7_o.jpg'></a>
-      <a href='/assets/images/content/istanbul/22718261258_1b13074064_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22718261258_1b13074064_o.jpg'></a>
-      <a href='/assets/images/content/istanbul/22816662940_b2d3e3c381_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22816662940_b2d3e3c381_o.jpg'></a>
-      <a href='/assets/images/content/istanbul/23122665852_7be7a0caff_k.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/23122665852_7be7a0caff_k.jpg'></a>
-      <a href='/assets/images/content/istanbul/22816638610_60af83daf4_o.jpg' data-featherlight="image"><img class="photo-square" src='/assets/images/content/istanbul/22816638610_60af83daf4_o.jpg'></a>
-
-
+      <a href='/assets/images/content/istanbul/22718388378_040f6f70ff_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22718388378_040f6f70ff_o.jpg'></a>
+      <a href='/assets/images/content/istanbul/22718368918_0672672b4f_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22718368918_0672672b4f_o.jpg'></a>
+      <a href='/assets/images/content/istanbul/22816475160_1eaa91a2eb_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22816475160_1eaa91a2eb_o.jpg'></a>
+      <a href='/assets/images/content/istanbul/22718189267_1f2812bfd7_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22718189267_1f2812bfd7_o.jpg'></a>
+      <a href='/assets/images/content/istanbul/22718261258_1b13074064_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22718261258_1b13074064_o.jpg'></a>
+      <a href='/assets/images/content/istanbul/22816662940_b2d3e3c381_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22816662940_b2d3e3c381_o.jpg'></a>
+      <a href='/assets/images/content/istanbul/23122665852_7be7a0caff_k.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/23122665852_7be7a0caff_k.jpg'></a>
+      <a href='/assets/images/content/istanbul/22816638610_60af83daf4_o.jpg' data-featherlight="image"><img class="photo-square" alt='Gallery Image' src='/assets/images/content/istanbul/22816638610_60af83daf4_o.jpg'></a>
     </div>
+    </section>
+    <button id='js-back-to-top' class='back-to-top'><a href='#header'>↥</a></button>
   </main>
 </div>
 </body>

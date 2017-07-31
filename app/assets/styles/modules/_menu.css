@@ -1,0 +1,37 @@
+/* Mobile menu */
+.mobile-menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.active {
+  transform: translateX(-210px);
+  transition: ease-in-out 0.3s;
+}
+
+.darken {
+  background: $primaryFontColour;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  z-index: 5;
+  transition: opacity 0.3s;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-menu__close-btn {
+  position: relative;
+  margin: 8rem auto 4rem auto;
+  font-size: 1.25rem;
+  color: $primaryFontColour;
+  background: transparent;
+  border: 0;
+  display: none;
+}

@@ -170,34 +170,10 @@ gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
     }]
   }))
 
-  .pipe(gulp.dest('docs'));
+  .pipe(gulp.dest('dist'));
 });
 
-gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
-  return gulp.src('app/about/index.html')
-  .pipe(usemin({
-    css: [function(){return rev()},
-    function(){return cssNano()}],
-    js: [function() {return rev()}, function() {return uglify()
-      .pipe(debug())
-    }]
-  }))
 
-  .pipe(gulp.dest('docs/about'));
-});
-
-gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
-  return gulp.src('app/buy-prints/index.html')
-  .pipe(usemin({
-    css: [function(){return rev()},
-    function(){return cssNano()}],
-    js: [function() {return rev()}, function() {return uglify()
-      .pipe(debug())
-    }]
-  }))
-
-  .pipe(gulp.dest('docs/buy-prints'));
-});
 
 // Preview final build in browserSync
 gulp.task('testBuild', function() {
