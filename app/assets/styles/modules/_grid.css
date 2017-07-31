@@ -108,9 +108,12 @@
 .photo-square {
   width: 280px;
   height: 280px;
-  margin: 40px;
   object-fit: cover;
   transition: all 0.15s;
+}
+
+.photo-square-link {
+  margin: 40px;
 }
 
 .photo-square:hover {

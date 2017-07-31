@@ -160,7 +160,7 @@ gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimiseImages', 'u
 
 // Usemin
 
-gulp.task('usemin', ['deleteDistFolder', 'compilecss'], function(){
+gulp.task('usemin', ['compilecss'], function(){
   return gulp.src('app/index.html')
   .pipe(usemin({
     css: [function(){return rev()},
