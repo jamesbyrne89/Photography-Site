@@ -19,6 +19,9 @@
   opacity: 0.8;
   z-index: 5;
   transition: opacity 0.3s;
+  display: flex;
+  flex-grow: 1;
+  height: calc(100% + 1.5vh);
 }
 
 .hidden {
@@ -34,4 +37,5 @@
   background: transparent;
   border: 0;
   display: none;
+  font-family: 'Zapf Dingbats';
 }

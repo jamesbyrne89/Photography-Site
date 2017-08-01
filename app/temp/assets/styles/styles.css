@@ -276,6 +276,13 @@
   opacity: 0.8;
   z-index: 5;
   transition: opacity 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: calc(100% + 1.5vh);
 }
 .hidden {
   opacity: 0;
@@ -289,6 +296,7 @@
   background: transparent;
   border: 0;
   display: none;
+  font-family: 'Zapf Dingbats';
 }
 ::-moz-selection {
   background: #2b2b2b;
@@ -297,6 +305,10 @@
 ::selection {
   background: #2b2b2b;
   color: #fff;
+}
+html,
+body {
+  overflow-x: hidden;
 }
 body {
   display: -webkit-box;
@@ -309,7 +321,6 @@ body {
   font-family: 'Playfair Display', georgia;
   color: #2b2b2b;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 main {
   background: #F5F4F0;
@@ -432,9 +443,10 @@ p {
     position: absolute;
     padding-left: 20px;
     z-index: 10;
-    height: 100%;
+    height: calc(100% + 1.5vh);
     width: 200px;
     top: 0;
+    bottom: 0;
     right: -210px;
     background: #fff;
     transition: all 0.3s;
@@ -468,13 +480,7 @@ p {
     left: 0px;
     width: 20px;
     height: 100%;
-  background: repeating-linear-gradient(
-  45deg,
-  #fff,
-  #fff 2px,
-  #2b2b2b 3px,
-  #2b2b2b 1px
-);
+    background: repeating-linear-gradient(45deg, #fff, #fff 2px, #2b2b2b 3px, #2b2b2b 1px);
   }
 
   .menu__item {
