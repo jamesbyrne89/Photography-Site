@@ -186,7 +186,7 @@ p {
     left: 0px;
     width: 20px;
     height: 100%;
-    background: repeating-linear-gradient(45deg, #fff, #fff 4px, #fff 4px, #cacaca 6px);
+    background: repeating-linear-gradient(45deg, #fff, #fff 4px, #fff 4px, #000 6px);
   }
 
   .menu__item {
