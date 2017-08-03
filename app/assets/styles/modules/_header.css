@@ -18,28 +18,33 @@
 
 
 .site-title {
-	font-size: 1.875rem;
-  font-weight: 400;
+	font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
 	vertical-align: text-bottom;
-	padding: 1em 0;
-  font-style: italic;
-  font-family: 'Playfair Display', georgia;
-  a:hover {
+	padding: 0 0.3em;
+  text-transform: uppercase;
+    font-family: 'fira sans';  
+    text-align: center;
+    border-left: solid 2px black;
+    line-height: 1;
+      a:hover {
     color: $deepPurple;
   }
 }
 
+
+
  .sec-title {
-    font-weight: 900 !important;
+  margin-top: 0.25em;
+    font-weight: 300 !important;
     font-style: normal;
-    text-transform: uppercase;
-    font-family: 'fira sans';
-    font-size: 0.4em;
-    line-height: 1.675;
-    letter-spacing: 0.6em;
+    font-size: 0.8em;
+    line-height: 1;
     display: block;
-    text-align: center;
+    font-family: georgia;
   }
+
 
 .menu > ul {
 	display: flex;
