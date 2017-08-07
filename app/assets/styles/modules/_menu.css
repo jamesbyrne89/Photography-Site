@@ -15,7 +15,7 @@
 }
 
 .darken {
-  background: $primaryFontColour;
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,8 @@
 
 .mobile-menu__close-btn {
   position: relative;
-  margin: 8rem auto 4rem auto;
+  margin: 2rem 0;
+  padding: 0.375rem;
   font-size: 1.25rem;
   color: $primaryFontColour;
   background: transparent;

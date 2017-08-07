@@ -106,14 +106,14 @@
 }
 
 .photo-square {
-  width: 280px;
-  height: 280px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   transition: all 0.15s;
 }
 
 .photo-square-link {
-  margin: 40px;
+  margin: 10px;
 }
 
 .photo-square:hover {

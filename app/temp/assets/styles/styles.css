@@ -16,7 +16,6 @@
           align-items: center;
 	padding: 0.5em 0em 0em 0em;
 	width: 100%;
-	border-bottom: solid 1px #cacaca;
 	margin-bottom: 2vh;
   height: 10vh;
   min-height: 100px;
@@ -27,23 +26,36 @@
   font-weight: 700;
   letter-spacing: 0.3em;
 	vertical-align: text-bottom;
+  text-align: center;
 	padding: 0 0.3em;
   text-transform: uppercase;
     font-family: 'fira sans';  
     text-align: center;
-    border-left: solid 2px black;
     line-height: 1;
 }
 .site-title a:hover {
 	color: #401935;
+}
+.site-title::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 94%;
+  right: 0;
+  left: 3%;
+  text-align: right;
+  background: #ff3530;
+  bottom: 1.01em;
 }
 .sec-title {
   margin-top: 0.25em;
     font-weight: 300 !important;
     font-style: normal;
     font-size: 0.8em;
-    line-height: 1;
+    line-height: 1.1;
     display: block;
+    text-align: center;
     font-family: georgia;
   }
 .menu > ul {
@@ -246,14 +258,14 @@
   margin: auto;
 }
 .photo-square {
-  width: 280px;
-  height: 280px;
+  width: 400px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.15s;
 }
 .photo-square-link {
-  margin: 40px;
+  margin: 10px;
 }
 .photo-square:hover {
   box-shadow: 0px 0px 10px 4px rgba(202, 202, 202, 1.0);
@@ -273,7 +285,7 @@
   transition: ease-in-out 0.3s;
 }
 .darken {
-  background: #2b2b2b;
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -296,7 +308,8 @@
 }
 .mobile-menu__close-btn {
   position: relative;
-  margin: 8rem auto 4rem auto;
+  margin: 2rem 0;
+  padding: 0.375rem;
   font-size: 1.25rem;
   color: #2b2b2b;
   background: transparent;
@@ -330,7 +343,7 @@ body {
   max-width: 100vw;
 }
 main {
-  background: #F5F4F0;
+  background: #f7f7f7;
   min-height: 85vh;
   height: auto;
   text-align: center;
@@ -378,20 +391,20 @@ a:hover {
   margin-bottom: 10em;
   font-family: 'fira sans';
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 2px;
   font-size: 1.25rem;
   display: inline-block;
   margin: auto;
-  font-weight: 700;
+  font-weight: 500;
 }
 .section-heading::after {
   content: '';
   position: relative;
   top: 1em;
-  left: 0;
-  width: 97%;
+  margin: auto;
+  width: 2rem;
   height: 2px;
-  background: #2b2b2b;
+  background: #ff3530;
   display: block;
   margin-bottom: 100px;
 }
@@ -402,7 +415,7 @@ p {
   padding: 1em;
   font-family: georgia, serif;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.45;
 }
 .back-to-top {
   display: none;
@@ -420,6 +433,10 @@ p {
 
   .header {
     padding: 1em;
+  }
+
+  p {
+    width: 100%;
   }
 
   .mobile-menu-btn {
@@ -445,6 +462,19 @@ p {
 
   .mobile-menu__close-btn {
     display: block;
+    color: #ff3530;
+  }
+
+  .album-tile {
+    height: 400px;
+  }
+
+  .photo-square-link {
+    margin: 0.25em;
+  }
+
+  .photo-square-link:hover {
+    box-shadow: none;
   }
 
   .menu {
@@ -459,6 +489,7 @@ p {
     background: #fff;
     transition: all 0.3s;
     font-size: 2rem;
+    background: #f7f7f7;
   }
 
   .menu > ul {
@@ -472,12 +503,13 @@ p {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 100%;
     height: auto;
-    padding-top: 5vh;
+    padding-top: 20vh;
+    padding-left: 0.5em;
     border-right: solid 1px #cacaca;
   }
 
@@ -488,11 +520,14 @@ p {
     left: 0px;
     width: 20px;
     height: 100%;
-    background: repeating-linear-gradient(45deg, #fff, #fff 4px, #fff 4px, #000 6px);
+      background-image: -webkit-repeating-radial-gradient(center center, #2b2b2b, #2b2b2b 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, #2b2b2b, #2b2b2b 1px, transparent 1px, transparent 100%);
+  background-size: 3px 3px;
   }
 
   .menu__item {
     margin-bottom: 20px;
+    font-size: 1rem;
   }
 
   .hero-image {

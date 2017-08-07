@@ -8,7 +8,6 @@
   align-items: center;
 	padding: 0.5em 0em 0em 0em;
 	width: 100%;
-	border-bottom: solid 1px #cacaca;
 	margin-bottom: 2vh;
   height: 10vh;
   min-height: 100px;
@@ -22,15 +21,28 @@
   font-weight: 700;
   letter-spacing: 0.3em;
 	vertical-align: text-bottom;
+  text-align: center;
 	padding: 0 0.3em;
   text-transform: uppercase;
     font-family: 'fira sans';  
     text-align: center;
-    border-left: solid 2px black;
     line-height: 1;
       a:hover {
     color: $deepPurple;
   }
+}
+
+.site-title::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 94%;
+  right: 0;
+  left: 3%;
+  text-align: right;
+  background: $orangeRed;
+  bottom: 1.01em;
 }
 
 
@@ -40,8 +52,9 @@
     font-weight: 300 !important;
     font-style: normal;
     font-size: 0.8em;
-    line-height: 1;
+    line-height: 1.1;
     display: block;
+    text-align: center;
     font-family: georgia;
   }
 
